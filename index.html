@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
     <title>Matthew Wong: Personal site and portfolio</title>
+    <style>
+        :root {
+            --color-accent: oklch(60% 0.1 240);
+        }
+        body {
+            color: var(--color-accent);
+        }
+        nav a:hover {
+            background-color: oklch(from var(--color-accent) 95% 5% h);
+            border-bottom-width: 0.4em;
+            border-bottom-style: solid;
+            border-bottom-color: var(--color-accent);
+        }
+    </style>
 </head>
-<body>
-    <h1>Matthew Wong</h1>
-    <p>Hi! This is my portfolio website.</p>
-    <img src="images/matt_p1.jpeg" alt="Picture of me"> 
-    <nav>
-        <article>
-            <li><a href="https://mathyoutw.github.io/portfolio/index.html">portfolio</a></li>
-            <li><a href="https://mathyoutw.github.io/portfolio/contact/index.html">contact</a></li>
-            <li><a href="https://mathyoutw.github.io/portfolio/projects/index.html">projects</a></li>
-            <li><a href="https://mathyoutw.github.io/portfolio/resume/index.html">resume</a></li>
-            <li><a href="https://github.com/mathyoutw" target="_blank">profile</a></li>
-        </article>
+<body style="max-width: 100ch; margin-inline: auto; padding: 10ch;">
+    <nav style="display: flex; margin-bottom:auto; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:oklch(80% 3% 200);">
+        <li style="display: contents;"><a class="current" style="flex: 1; border-bottom-width: 0.4em; border-bottom-style:solid; border-bottom-color: oklch(80% 3% 200); padding-bottom:-0.2em; text-decoration:none; color: inherit; text-align:center; padding:0.5em;" href="https://mathyoutw.github.io/portfolio/index.html">Home</a></li>
+        <li style="display: contents;"><a style="flex: 1; text-decoration:none; color: inherit; text-align:center; padding:0.5em;" href="https://mathyoutw.github.io/portfolio/contact/index.html">Contact</a></li>
+        <li style="display: contents;"><a style="flex: 1; text-decoration:none; color: inherit; text-align:center; padding:0.5em;" href="https://mathyoutw.github.io/portfolio/projects/index.html">Projects</a></li>
+        <li style="display: contents;"><a style="flex: 1; text-decoration:none; color: inherit; text-align:center; padding:0.5em;" href="https://mathyoutw.github.io/portfolio/resume/index.html">Resume</a></li>
+        <li style="display: contents;"><a style="flex: 1; text-decoration:none; color: inherit; text-align:center; padding:0.5em;" href="https://github.com/mathyoutw" target="_blank">GitHub</a></li>
     </nav>
+    <h1>Matthew Wong</h1>
+    <img src="images/matt_p1.jpeg" alt="Picture of me"> 
+    <p>Hi! This is my portfolio website. I'm adding more words so that I can see how the words will wrap and if I like how much max-width that I have set.</p>
 </body>
 </html>
