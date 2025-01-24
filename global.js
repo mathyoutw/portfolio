@@ -15,10 +15,10 @@ function $$(selector, context = document) {
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'portfolio/contact/', title: 'Contact'},
-    { url: 'portfolio/projects/', title: 'Projects'},
-    { url: 'portfolio/resume/', title: 'Resume'},
+    { url: '', title: 'Home'},
+    { url: '/portfolio/contact/', title: 'Contact'},
+    { url: '/portfolio/projects/', title: 'Projects'},
+    { url: '/portfolio/resume/', title: 'Resume'},
     { url: 'https://github.com/mathyoutw', title: 'GitHub'}
 ];
 
