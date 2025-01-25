@@ -1,6 +1,76 @@
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-  }
+  /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+  font: 100%/1.5 system-ui;
+  max-width: 100ch; 
+  margin-inline: auto; 
+  padding: 10ch;
+}
+
+html {
+  color-scheme: light dark;
+  background-color: canvas;
+  color: canvastext;
+}
+
+:root {
+  --color-accent: oklch(60% 0.1 240);
+}
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  /* ... other styles and nested rules ... */
+  display: flex;
+  margin-bottom:auto;
+  border-bottom-width:1px;
+  border-bottom-style:solid; 
+  border-bottom-color: var(--border-color);
+}
+
+nav a:hover {
+  background-color: oklch(50% 0.2 240 / 20%);
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-accent);
+}
+
+nav a.current {
+  border-bottom-color: var(--border-color);
+  flex: 1; 
+  border-bottom-width: 0.4em; 
+  border-bottom-style:solid; 
+  padding-bottom: 0.2em; 
+  text-decoration:none;
+  color: inherit; 
+  text-align:center; 
+  padding:0.5em;
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.color-scheme {
+  position: absolute; 
+  top: 1rem;          
+  right: 1rem;        
+  font-size: 80%;     
+  font-family: inherit; 
+  display: flex;      
+  align-items: center;
+  gap: 0.5em;
+}
+
+.color-scheme select {
+  padding: 0.3em; 
+  font-size: 100%; 
+  border: 1px solid var(--border-color, #ccc); 
+  border-radius: 0.25em; 
+  background: canvas; 
+  color: canvastext; 
+}
