@@ -16,6 +16,7 @@ html {
 
 :root {
   --color-accent: oklch(60% 0.1 240);
+  --border-color: oklch(50% 10% 200 / 40%);
 }
 
 nav {
@@ -85,4 +86,23 @@ article h2 {
   margin: 0;
   line-height: 1.1;
   text-wrap: balance;
+}
+
+#profile-stats dl {
+  border: 5px solid var(--border-color);
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: large;
+  font-family: inherit;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+}
+
+#profile-stats dd {
+  font-size: large;
+  margin: 0;
+  grid-row: 2;
 }
