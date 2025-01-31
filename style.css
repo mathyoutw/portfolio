@@ -74,3 +74,15 @@ nav a {
   background: canvas; 
   color: canvastext; 
 }
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+article h2 {
+  margin: 0;
+  line-height: 1.1;
+  text-wrap: balance;
+}
