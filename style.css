@@ -88,8 +88,33 @@ article h2 {
   text-wrap: balance;
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2ch; /* Add some space between items */
+  margin-inline: auto; /* Center the grid */
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  padding: 1ch; /* Add some padding */
+  border: 1px solid var(--border-color); /* Add a border */
+  border-radius: 0.5em; /* Round the corners */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.projects article h2 {
+  margin: 0;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
 #profile-stats dl {
   border: 5px solid var(--border-color);
+  border-radius: 0.5em;
+  box-sizing: border-box;
   padding: 0.5em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -105,4 +130,12 @@ article h2 {
   font-size: large;
   margin: 0;
   grid-row: 2;
+}
+
+.contact {
+  border: 5px solid var(--border-color);
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  padding: 0.5em; 
+  background-color: oklch(50% 0.2 240 / 20%);
 }
