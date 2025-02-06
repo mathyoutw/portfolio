@@ -139,3 +139,67 @@ article h2 {
   padding: 0.5em; 
   background-color: oklch(50% 0.2 240 / 20%);
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+ul.legend {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border: 1px solid var(--border-color); /* Add a border */
+  border-radius: 0.5em; /* Round the corners */
+  padding: 1em; /* Add padding inside the legend */
+  margin: 1em 0; /* Add margin around the legend */
+}
+.legend li span {
+  display: inline-block; /* Make the span an inline-block element */
+  width: 1em; /* Set the width */
+  height: 1em; /* Set the height */
+  background-color: var(--color); /* Set the background color */
+  border-radius: 50%; 
+}
+
+.legend li {
+  display: flex; /* Apply flexbox layout */
+  flex: 1;
+  align-items: center; /* Vertically center align the text and the swatch */
+  gap: 0.5em; /* Add spacing between items */
+}
+
+div.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.searchBar {
+  width: 100%; /* Make the search bar take the full width */
+  padding: 0.5em; /* Add padding inside the search bar */
+  font-size: 1em; /* Set the font size */
+  border: 1px solid var(--border-color); /* Add a border */
+  border-radius: 0.5em; /* Round the corners */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  margin-bottom: 1em; /* Add some space below the search bar */
+}
+
+svg:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
