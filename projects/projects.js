@@ -13,11 +13,11 @@ projectsTitle.textContent = `${projects.length} Projects`;
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 let selectedIndex = -1;
-let newData = []; // ✅ Store global newData
+let newData = []; 
 
 function renderPieChart(projectsGiven) {
     let newRolledData = d3.rollups(projectsGiven, (v) => v.length, (d) => d.year);
-    newData = newRolledData.map(([year, count]) => ({ value: count, label: year })); // ✅ Update global newData
+    newData = newRolledData.map(([year, count]) => ({ value: count, label: year })); 
 
     let newSliceGenerator = d3.pie().value((d) => d.value);
     let newArcData = newSliceGenerator(newData);
@@ -32,7 +32,7 @@ function renderPieChart(projectsGiven) {
             .attr('d', arc)
             .attr('fill', colors(idx))
             .attr('class', 'wedge')
-            .on('click', function() { // ✅ Click event inside renderPieChart()
+            .on('click', function() { 
                 selectedIndex = selectedIndex === idx ? -1 : idx;
 
                 d3.selectAll('.wedge')
